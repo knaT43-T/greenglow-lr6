@@ -31,10 +31,12 @@ GreenGlow — одностраничный сайт магазина натур�
 .
 ├── index.html              # разметка страницы
 ├── style.css               # стили
-├── assets/img/             # изображения товаров
-│   ├── photo1.jpg
-│   ├── photo2.jpg
-│   └── photo3.jpg
+├── assets/
+│   ├── favicon.svg         # иконка сайта
+│   └── img/                # изображения товаров
+│       ├── photo1.jpg
+│       ├── photo2.jpg
+│       └── photo3.jpg
 ├── .github/workflows/      # workflow GitHub Actions
 └── README.md
 ```
