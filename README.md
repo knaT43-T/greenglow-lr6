@@ -1,4 +1,5 @@
 # GreenGlow — сайт натуральной косметики
+[![Deploy static site](https://github.com/knaT43-T/greenglow-lr6/actions/workflows/deploy.yml/badge.svg)](https://github.com/knaT43-T/greenglow-lr6/actions/workflows/deploy.yml)
 
 Учебный проект по дисциплине «Информатика». Статический сайт-лендинг магазина
 натуральной косметики GreenGlow, созданный в лабораторной работе № 4 и перенесённый
