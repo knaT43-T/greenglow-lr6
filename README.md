@@ -37,7 +37,6 @@ GreenGlow — одностраничный сайт магазина натур�
 │       ├── photo1.jpg
 │       ├── photo2.jpg
 │       └── photo3.jpg
-├── .github/workflows/      # workflow GitHub Actions
 └── README.md
 ```
 
