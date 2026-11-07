@@ -1486,6 +1486,3 @@ button:focus-visible,
     transition-duration: 0.01ms !important;
   }
 }
-.demo-error {
- colr: #000;
-}
