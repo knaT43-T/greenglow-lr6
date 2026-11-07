@@ -3,6 +3,9 @@ name: Deploy static site
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
  
 permissions:
   contents: read
@@ -14,7 +17,31 @@ concurrency:
   cancel-in-progress: false
  
 jobs:
+  lint:
+    name: Lint HTML and CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+ 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+ 
+      - name: Install linters
+        run: npm install --no-save htmlhint@1.9.2 stylelint@16.10.0 stylelint-config-recommended@14.0.1
+ 
+      - name: Check HTML
+        run: npx htmlhint "*.html"
+ 
+      - name: Check CSS
+        run: npx stylelint "*.css"
+ 
   deploy:
+    name: Deploy to GitHub Pages
+    needs: lint
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
